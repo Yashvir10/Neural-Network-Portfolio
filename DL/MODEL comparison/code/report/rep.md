@@ -1,0 +1,13 @@
+# Comparative Analysis of ANN, CNN, and RNN Using Deep Learning
+
+This project focuses on the implementation and comparison of three popular Deep Learning models: Artificial Neural Networks (ANN), Convolutional Neural Networks (CNN), and Recurrent Neural Networks (RNN). The main objective is to understand how these neural network architectures perform on different types of data and to identify their strengths and applications. Deep Learning has become a vital part of Artificial Intelligence and is widely used in image processing, natural language processing, prediction systems, and decision-making applications.
+
+For the ANN model, a Student Pass/Fail Prediction dataset was used. The dataset was preprocessed by handling missing values, scaling numerical features, and splitting the data into training and testing sets. The ANN model was built using multiple dense layers with ReLU and Sigmoid activation functions. The model was trained and evaluated using accuracy and confusion matrix metrics to measure its classification performance.
+
+For the CNN model, the MNIST Handwritten Digit Dataset was utilized. Images were normalized and reshaped before being fed into the network. The CNN architecture consisted of convolutional layers, pooling layers, flatten layers, and dense layers. The model successfully extracted image features and achieved high classification accuracy, demonstrating the effectiveness of CNNs in computer vision tasks.
+
+The RNN model was developed for sequential data analysis. Time-step sequences were created and reshaped to fit the recurrent architecture. The model learned temporal patterns in the data and generated predictions based on previous observations. RNNs proved effective for handling sequence-dependent information such as time-series forecasting and text processing.
+
+The results obtained from all three models were compared using performance metrics such as accuracy, loss, and prediction quality. ANN performed well on structured tabular data, CNN achieved excellent results on image classification tasks, and RNN effectively handled sequential and time-dependent data. The comparison highlights that the choice of neural network architecture depends on the nature of the dataset and the problem being solved.
+
+In conclusion, this project demonstrates the practical implementation of ANN, CNN, and RNN models using TensorFlow and Keras. The study provides valuable insights into the working principles, advantages, and real-world applications of these Deep Learning techniques. Future enhancements may include the use of advanced architectures such as LSTM, GRU, Transfer Learning, and Transformer-based models to further improve performance and accuracy.
