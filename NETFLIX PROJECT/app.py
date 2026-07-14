@@ -1,151 +1,12 @@
-# import streamlit as st
-# import requests
-
-# st.title("🎬 Netflix Churn Prediction")
-
-# gender = st.selectbox("Gender", ["Male", "Female"])
-
-# SeniorCitizen = st.selectbox(
-#     "Senior Citizen",
-#     [0, 1]
-# )
-
-# Partner = st.selectbox("Partner", ["Yes", "No"])
-
-# Dependents = st.selectbox("Dependents", ["Yes", "No"])
-
-# tenure = st.number_input("Tenure", 0, 100, 12)
-
-# PhoneService = st.selectbox(
-#     "Phone Service",
-#     ["Yes", "No"]
-# )
-
-# MultipleLines = st.selectbox(
-#     "Multiple Lines",
-#     ["Yes", "No", "No phone service"]
-# )
-
-# InternetService = st.selectbox(
-#     "Internet Service",
-#     ["DSL", "Fiber optic", "No"]
-# )
-
-# OnlineSecurity = st.selectbox(
-#     "Online Security",
-#     ["Yes", "No"]
-# )
-
-# OnlineBackup = st.selectbox(
-#     "Online Backup",
-#     ["Yes", "No"]
-# )
-
-# DeviceProtection = st.selectbox(
-#     "Device Protection",
-#     ["Yes", "No"]
-# )
-
-# TechSupport = st.selectbox(
-#     "Tech Support",
-#     ["Yes", "No"]
-# )
-
-# StreamingTV = st.selectbox(
-#     "Streaming TV",
-#     ["Yes", "No"]
-# )
-
-# StreamingMovies = st.selectbox(
-#     "Streaming Movies",
-#     ["Yes", "No"]
-# )
-
-# Contract = st.selectbox(
-#     "Contract",
-#     ["Month-to-month", "One year", "Two year"]
-# )
-
-# PaperlessBilling = st.selectbox(
-#     "Paperless Billing",
-#     ["Yes", "No"]
-# )
-
-# PaymentMethod = st.selectbox(
-#     "Payment Method",
-#     [
-#         "Electronic check",
-#         "Mailed check",
-#         "Bank transfer (automatic)",
-#         "Credit card (automatic)"
-#     ]
-# )
-
-# MonthlyCharges = st.number_input(
-#     "Monthly Charges",
-#     0.0,
-#     500.0,
-#     70.0
-# )
-
-# TotalCharges = st.number_input(
-#     "Total Charges",
-#     0.0,
-#     10000.0,
-#     1000.0
-# )
-
-# if st.button("Predict"):
-
-#     payload = {
-#         "gender": gender,
-#         "SeniorCitizen": SeniorCitizen,
-#         "Partner": Partner,
-#         "Dependents": Dependents,
-#         "tenure": tenure,
-#         "PhoneService": PhoneService,
-#         "MultipleLines": MultipleLines,
-#         "InternetService": InternetService,
-#         "OnlineSecurity": OnlineSecurity,
-#         "OnlineBackup": OnlineBackup,
-#         "DeviceProtection": DeviceProtection,
-#         "TechSupport": TechSupport,
-#         "StreamingTV": StreamingTV,
-#         "StreamingMovies": StreamingMovies,
-#         "Contract": Contract,
-#         "PaperlessBilling": PaperlessBilling,
-#         "PaymentMethod": PaymentMethod,
-#         "MonthlyCharges": MonthlyCharges,
-#         "TotalCharges": TotalCharges
-#     }
-
-#     try:
-#         response = requests.post(
-#             "http://127.0.0.1:8000/predict",
-#             json=payload
-#         )
-
-#         result = response.json()
-
-#         st.success(result)
-
-#     except Exception as e:
-#         st.error(str(e))
-# Enhanced Netflix Churn Prediction Streamlit UI
-
 import streamlit as st
 import requests
 import time
-
-# ---------------- PAGE CONFIG ----------------
 st.set_page_config(
     page_title="Netflix Churn Prediction",
     page_icon="🎬",
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
-# ---------------- CUSTOM CSS ----------------
 st.markdown("""
 <style>
 
@@ -245,14 +106,12 @@ label {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- HEADER ----------------
 st.markdown('<p class="main-title">🎬 Netflix Churn Prediction</p>', unsafe_allow_html=True)
 st.markdown(
     '<p class="subtitle">AI-Powered Customer Retention Intelligence System</p>',
     unsafe_allow_html=True
 )
 
-# ---------------- SIDEBAR ----------------
 with st.sidebar:
     st.image("https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg", width=220)
 
@@ -275,10 +134,8 @@ with st.sidebar:
 
     st.success("System Active")
 
-# ---------------- MAIN LAYOUT ----------------
 left_col, right_col = st.columns([2.3, 1])
 
-# ---------------- INPUT FORM ----------------
 with left_col:
 
     st.markdown('<div class="card">', unsafe_allow_html=True)
@@ -404,7 +261,6 @@ with left_col:
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- DASHBOARD ----------------
 with right_col:
 
     st.markdown('<div class="card">', unsafe_allow_html=True)
@@ -431,7 +287,6 @@ with right_col:
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------- PREDICTION ----------------
 if predict:
 
     payload = {
@@ -495,7 +350,6 @@ if predict:
         except Exception as e:
             st.error(f"FastAPI Server Error: {e}")
 
-# ---------------- FOOTER ----------------
 st.markdown("---")
 
 st.markdown(
