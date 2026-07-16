@@ -19,11 +19,13 @@ A complete, self-contained NLP pipeline for binary sentiment classification (pos
 
 ```
 NLP/
-├── NLP_1.ipynb        # Main notebook — run top to bottom
-├── requirements.txt    # Python dependencies
 ├── .gitignore
 ├── LICENSE
-└── README.md
+├── NLP_1.ipynb        # Main notebook — run top to bottom
+└── Readme.md
+└──requirements.txt     # Python dependencies
+└──sentiment_model.pkl
+└──tfidf_vectorizer.pkl
 ```
 
 ## Setup
