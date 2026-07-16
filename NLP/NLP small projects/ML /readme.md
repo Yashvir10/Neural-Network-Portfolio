@@ -1,5 +1,4 @@
 # ML_P1 — Spam Text Classifier
-
 A simple machine learning project that classifies short text messages as **SPAM** or **NOT SPAM** using text preprocessing (NLTK) and a Multinomial Naive Bayes classifier (scikit-learn).
 
 ## Overview
